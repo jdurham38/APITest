@@ -8,7 +8,7 @@ namespace Reminder.Controllers
     [Route("api/[controller]")]
     public class ReminderController : ControllerBase
     {
-        private static List<string> reminders = new List<string>();
+        private static List<ReminderModel> reminders = new List<ReminderModel>();
 
         [HttpGet]
         public IActionResult GetReminders()
@@ -17,31 +17,17 @@ namespace Reminder.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddReminder([FromBody] string reminder)
+        public IActionResult CreateReminder([FromBody] ReminderModel reminder)
         {
-            if (!string.IsNullOrWhiteSpace(reminder))
+            if (reminder == null)
             {
-                reminders.Add(reminder);
-                return Ok();
+                return BadRequest("Invalid reminder data.");
             }
-            else
-            {
-                return BadRequest("Invalid reminder");
-            }
-        }
 
-        [HttpDelete("{index}")]
-        public IActionResult DeleteReminder(int index)
-        {
-            if (index >= 0 && index < reminders.Count)
-            {
-                reminders.RemoveAt(index);
-                return Ok();
-            }
-            else
-            {
-                return NotFound();
-            }
+            reminder.Id = reminders.Count + 1;
+            reminders.Add(reminder);
+
+            return CreatedAtAction(nameof(GetReminders), null);
         }
     }
 }
