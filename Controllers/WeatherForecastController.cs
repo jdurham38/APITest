@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Reminder.Controllers
 {
@@ -28,6 +29,20 @@ namespace Reminder.Controllers
             reminders.Add(reminder);
 
             return CreatedAtAction(nameof(GetReminders), null);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteReminder(int id)
+        {
+            var reminderToDelete = reminders.FirstOrDefault(r => r.Id == id);
+            if (reminderToDelete == null)
+            {
+                return NotFound("Reminder not found.");
+            }
+
+            reminders.Remove(reminderToDelete);
+
+            return NoContent();
         }
     }
 }
