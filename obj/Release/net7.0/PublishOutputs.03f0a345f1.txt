@@ -1,0 +1,12 @@
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/Reminder
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/appsettings.Development.json
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/appsettings.json
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/Reminder.dll
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/Reminder.deps.json
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/Reminder.runtimeconfig.json
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/Reminder.pdb
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/Microsoft.AspNetCore.OpenApi.dll
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/Microsoft.OpenApi.dll
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/Swashbuckle.AspNetCore.Swagger.dll
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/joshdurham/Desktop/apiForDigPortfolio/Reminder/bin/Release/net7.0/publish/Swashbuckle.AspNetCore.SwaggerUI.dll
