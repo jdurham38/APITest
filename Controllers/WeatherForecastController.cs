@@ -31,6 +31,23 @@ namespace Reminder.Controllers
             return CreatedAtAction(nameof(GetReminders), null);
         }
 
+        [HttpPut("{id}")]
+        public IActionResult UpdateReminder(int id, [FromBody] ReminderModel updatedReminder)
+        {
+            var existingReminder = reminders.FirstOrDefault(r => r.Id == id);
+            if (existingReminder == null)
+            {
+                return NotFound("Reminder not found.");
+            }
+
+            // Update the fields of the existing reminder with the new values
+            existingReminder.DateTime = updatedReminder.DateTime;
+            existingReminder.Description = updatedReminder.Description;
+            existingReminder.Priority = updatedReminder.Priority;
+
+            return NoContent();
+        }
+
         [HttpDelete("{id}")]
         public IActionResult DeleteReminder(int id)
         {
